@@ -170,7 +170,7 @@ $root.team = (function() {
          * Properties of a GetTeamRequest.
          * @memberof team
          * @interface IGetTeamRequest
-         * @property {number|null} [teamId] GetTeamRequest teamId
+         * @property {number|null} [team_id] GetTeamRequest team_id
          */
 
         /**
@@ -189,12 +189,12 @@ $root.team = (function() {
         }
 
         /**
-         * GetTeamRequest teamId.
-         * @member {number} teamId
+         * GetTeamRequest team_id.
+         * @member {number} team_id
          * @memberof team.GetTeamRequest
          * @instance
          */
-        GetTeamRequest.prototype.teamId = 0;
+        GetTeamRequest.prototype.team_id = 0;
 
         /**
          * Creates a new GetTeamRequest instance using the specified properties.
@@ -220,8 +220,8 @@ $root.team = (function() {
         GetTeamRequest.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.teamId != null && message.hasOwnProperty("teamId"))
-                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.teamId);
+            if (message.team_id != null && message.hasOwnProperty("team_id"))
+                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.team_id);
             return writer;
         };
 
@@ -257,7 +257,7 @@ $root.team = (function() {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1:
-                    message.teamId = reader.int32();
+                    message.team_id = reader.int32();
                     break;
                 default:
                     reader.skipType(tag & 7);
@@ -294,9 +294,9 @@ $root.team = (function() {
         GetTeamRequest.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.teamId != null && message.hasOwnProperty("teamId"))
-                if (!$util.isInteger(message.teamId))
-                    return "teamId: integer expected";
+            if (message.team_id != null && message.hasOwnProperty("team_id"))
+                if (!$util.isInteger(message.team_id))
+                    return "team_id: integer expected";
             return null;
         };
 
@@ -312,8 +312,8 @@ $root.team = (function() {
             if (object instanceof $root.team.GetTeamRequest)
                 return object;
             var message = new $root.team.GetTeamRequest();
-            if (object.teamId != null)
-                message.teamId = object.teamId | 0;
+            if (object.team_id != null)
+                message.team_id = object.team_id | 0;
             return message;
         };
 
@@ -331,9 +331,9 @@ $root.team = (function() {
                 options = {};
             var object = {};
             if (options.defaults)
-                object.teamId = 0;
-            if (message.teamId != null && message.hasOwnProperty("teamId"))
-                object.teamId = message.teamId;
+                object.team_id = 0;
+            if (message.team_id != null && message.hasOwnProperty("team_id"))
+                object.team_id = message.team_id;
             return object;
         };
 
@@ -530,7 +530,7 @@ $root.team = (function() {
             case 0:
                 message.hometown = 0;
                 break;
-            case "NEWYOUR":
+            case "NEWYORK":
             case 1:
                 message.hometown = 1;
                 break;
@@ -610,14 +610,14 @@ $root.common = (function() {
          * @name common.city.City
          * @enum {string}
          * @property {number} UNKNOWN=0 UNKNOWN value
-         * @property {number} NEWYOUR=1 NEWYOUR value
+         * @property {number} NEWYORK=1 NEWYORK value
          * @property {number} MADRID=2 MADRID value
          * @property {number} TOKYO=3 TOKYO value
          */
         city.City = (function() {
             var valuesById = {}, values = Object.create(valuesById);
             values[valuesById[0] = "UNKNOWN"] = 0;
-            values[valuesById[1] = "NEWYOUR"] = 1;
+            values[valuesById[1] = "NEWYORK"] = 1;
             values[valuesById[2] = "MADRID"] = 2;
             values[valuesById[3] = "TOKYO"] = 3;
             return values;
@@ -688,7 +688,7 @@ $root.user = (function() {
          * Properties of a GetProfileRequest.
          * @memberof user
          * @interface IGetProfileRequest
-         * @property {number|null} [userId] GetProfileRequest userId
+         * @property {number|null} [user_id] GetProfileRequest user_id
          */
 
         /**
@@ -707,12 +707,12 @@ $root.user = (function() {
         }
 
         /**
-         * GetProfileRequest userId.
-         * @member {number} userId
+         * GetProfileRequest user_id.
+         * @member {number} user_id
          * @memberof user.GetProfileRequest
          * @instance
          */
-        GetProfileRequest.prototype.userId = 0;
+        GetProfileRequest.prototype.user_id = 0;
 
         /**
          * Creates a new GetProfileRequest instance using the specified properties.
@@ -738,8 +738,8 @@ $root.user = (function() {
         GetProfileRequest.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.userId != null && message.hasOwnProperty("userId"))
-                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.userId);
+            if (message.user_id != null && message.hasOwnProperty("user_id"))
+                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.user_id);
             return writer;
         };
 
@@ -775,7 +775,7 @@ $root.user = (function() {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1:
-                    message.userId = reader.int32();
+                    message.user_id = reader.int32();
                     break;
                 default:
                     reader.skipType(tag & 7);
@@ -812,9 +812,9 @@ $root.user = (function() {
         GetProfileRequest.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.userId != null && message.hasOwnProperty("userId"))
-                if (!$util.isInteger(message.userId))
-                    return "userId: integer expected";
+            if (message.user_id != null && message.hasOwnProperty("user_id"))
+                if (!$util.isInteger(message.user_id))
+                    return "user_id: integer expected";
             return null;
         };
 
@@ -830,8 +830,8 @@ $root.user = (function() {
             if (object instanceof $root.user.GetProfileRequest)
                 return object;
             var message = new $root.user.GetProfileRequest();
-            if (object.userId != null)
-                message.userId = object.userId | 0;
+            if (object.user_id != null)
+                message.user_id = object.user_id | 0;
             return message;
         };
 
@@ -849,9 +849,9 @@ $root.user = (function() {
                 options = {};
             var object = {};
             if (options.defaults)
-                object.userId = 0;
-            if (message.userId != null && message.hasOwnProperty("userId"))
-                object.userId = message.userId;
+                object.user_id = 0;
+            if (message.user_id != null && message.hasOwnProperty("user_id"))
+                object.user_id = message.user_id;
             return object;
         };
 
@@ -1091,7 +1091,7 @@ $root.user = (function() {
             case 0:
                 message.city = 0;
                 break;
-            case "NEWYOUR":
+            case "NEWYORK":
             case 1:
                 message.city = 1;
                 break;
@@ -1391,7 +1391,7 @@ $root.user = (function() {
             case 0:
                 message.city = 0;
                 break;
-            case "NEWYOUR":
+            case "NEWYORK":
             case 1:
                 message.city = 1;
                 break;

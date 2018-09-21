@@ -10,6 +10,7 @@ mkdir -p ${DST_DIR}
 node_modules/.bin/pbjs \
 --target static-module \
 --wrap commonjs \
+--keep-case \
 --path ${SRC_DIR} \
 --out ${DST_DIR}/rpc.js \
 ${SRC_DIR}/*.proto \
