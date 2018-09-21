@@ -19,5 +19,5 @@ app
   .use(router.routes())
   .use(router.allowedMethods());
 
-const server = app.listen(3000);
-console.log(`Listening on port ${server.address().port}..`);
+const main = app.listen(3000);
+console.log(`Listening on port ${main.address().port}..`);

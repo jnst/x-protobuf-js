@@ -35,9 +35,18 @@ tools/gen.sh
 
 ## Run
 
+Listening on server.
+
 ```bash
-$ yarn start
+$ yarn server
+
+Listening on port 3000..
+```
+
+Connect by client.
+
+```bash
+$ yarn client
 
 GetProfile: {"name":"taro","bio":"He loves protocol buffers."}
-✨  Done in 0.27s.
 ```

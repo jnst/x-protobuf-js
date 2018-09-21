@@ -1,5 +1,6 @@
 'use strict';
 
+const proto = require('protobufjs');
 const Constant = require('./constant');
 
 class Handler {
@@ -10,8 +11,19 @@ class Handler {
 
   static async rpc(ctx, next) {
     if (ctx.req.rawBody) {
+      const root = await proto.load('./proto/rpc.proto');
+      const GetProfileResponse= root.lookupType('user.GetProfileResponse');
+      const City = root.lookupEnum('common.city.City');
+      const Language = root.lookupEnum('common.lang.Language');
+      const response = GetProfileResponse.create({
+        name: 'taro',
+        bio: 'He loves protobuf.',
+        city: City.values.TOKYO,
+        language: Language.values.JAPANESE,
+      });
+
       ctx.type = Constant.CONTENT_TYPE;
-      ctx.body = null; // await pb.load(ctx.req.rawBody);
+      ctx.body = GetProfileResponse.encode(response).finish();
     }
     await next();
   }
