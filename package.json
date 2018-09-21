@@ -10,7 +10,10 @@
     "start": "node client.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "koa": "^2.5.3",
-    "protobufjs": "^6.8.8"
+    "koa-router": "^7.4.0",
+    "protobufjs": "^6.8.8",
+    "raw-body": "^2.3.3"
   }
 }
