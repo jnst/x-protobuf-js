@@ -1,0 +1,16 @@
+{
+  "name": "x-protobuf-js",
+  "version": "0.0.1",
+  "description": "eXample protocol buffers",
+  "repository": "https://github.com/jnst/x-protobuf-js",
+  "author": "jnst <jnst@outlook.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node client.js"
+  },
+  "dependencies": {
+    "koa": "^2.5.3",
+    "protobufjs": "^6.8.8"
+  }
+}
