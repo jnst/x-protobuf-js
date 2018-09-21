@@ -12,7 +12,12 @@ class Handler {
   static async rpc(ctx, next) {
     if (ctx.req.rawBody) {
       const root = await proto.load('./proto/rpc.proto');
-      const GetProfileResponse= root.lookupType('user.GetProfileResponse');
+
+      const GetProfileRequest = root.lookupType('user.GetProfileRequest');
+      const request = GetProfileRequest.decode(ctx.req.rawBody);
+      console.log(`  handling request here -> ${JSON.stringify(request)}`); // TODO: why empty?
+
+      const GetProfileResponse = root.lookupType('user.GetProfileResponse');
       const City = root.lookupEnum('common.city.City');
       const Language = root.lookupEnum('common.lang.Language');
       const response = GetProfileResponse.create({
