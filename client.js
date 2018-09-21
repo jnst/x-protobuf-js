@@ -25,4 +25,4 @@ const proto = require('protobufjs');
 
   const response = await rpc.getProfile(request);
   console.log(`GetProfile: ${JSON.stringify(response)}`);
-})();
+})().catch(err => console.error(err));
