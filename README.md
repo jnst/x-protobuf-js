@@ -8,7 +8,6 @@ Sample code of Protocol Buffers service interface.
 ## Setup
 
 ```bash
-brew install protoc
 brew install yarn --without-node
 ```
 
@@ -17,11 +16,6 @@ yarn install
 ```
 
 ## Version
-
-```bash
-$ protoc --version
-libprotoc 3.6.1
-```
 
 ```bash
 $ yarn --version
