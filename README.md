@@ -1,4 +1,4 @@
-# x-protobuf-js
+# x-protobuf-rpc
 
 Sample code of Protocol Buffers service interface.
 
