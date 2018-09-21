@@ -4,7 +4,7 @@ package common.city;
 
 enum City {
   UNKNOWN = 0;
-  NEWYOUR = 1;
+  NEWYORK = 1;
   MADRID  = 2;
   TOKYO   = 3;
 }
