@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "team.proto";
+import "user.proto";
+
+package rpc;
+
+service Rpc {
+  rpc GetProfile    (user.GetProfileRequest)    returns (user.GetProfileResponse);
+  rpc UpdateProfile (user.UpdateProfileRequest) returns (user.UpdateProfileResponse);
+  rpc GetTeam       (team.GetTeamRequest)       returns (team.GetTeamResponse);
+}

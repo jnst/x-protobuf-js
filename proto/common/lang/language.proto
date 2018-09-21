@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package common.lang;
+
+enum Language {
+  UNKNOWN  = 0;
+  ENGLISH  = 1;
+  SPANISH  = 2;
+  JAPANESE = 3;
+}

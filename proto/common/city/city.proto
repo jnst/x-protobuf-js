@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package common.city;
+
+enum City {
+  UNKNOWN = 0;
+  NEWYOUR = 1;
+  MADRID  = 2;
+  TOKYO   = 3;
+}

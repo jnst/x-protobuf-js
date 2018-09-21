@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+import "common/city/city.proto";
+import "common/lang/language.proto";
+import "common/status_code.proto";
+
+package user;
+
+message GetProfileRequest {
+  int32 user_id = 1;
+}
+
+message GetProfileResponse {
+  string               name     = 1;
+  string               bio      = 2;
+  common.city.City     city     = 3;
+  common.lang.Language language = 4;
+}
+
+message UpdateProfileRequest {
+  string               name     = 1;
+  string               bio      = 2;
+  common.city.City     city     = 3;
+  common.lang.Language language = 4;
+}
+
+message UpdateProfileResponse {
+  common.StatusCode code    = 1;
+  string            message = 2;
+}

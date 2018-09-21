@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "common/city/city.proto";
+
+package team;
+
+message GetTeamRequest {
+  int32 team_id = 1;
+}
+
+message GetTeamResponse {
+  string           name     = 1;
+  common.city.City hometown = 2;
+}
